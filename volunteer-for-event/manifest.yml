@@ -1,0 +1,18 @@
+modules:
+  macro:
+    - key: volunteer-for-event-app
+      resource: main
+      render: native
+      resolver:
+        function: resolver
+      title: Volunteer for an Event
+  function:
+    - key: resolver
+      handler: index.handler
+resources:
+  - key: main
+    path: src/frontend/index.jsx
+app:
+  runtime:
+    name: nodejs18.x
+  id: ari:cloud:ecosystem::app/34c6308f-928b-4a37-983d-ca2696a97264

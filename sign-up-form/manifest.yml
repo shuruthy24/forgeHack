@@ -1,0 +1,19 @@
+modules:
+  macro:
+    - key: sign-up-form-app
+      resource: main
+      render: native
+      resolver:
+        function: resolver
+      title: Event Sign up form
+      description: Creates a sign up form for an event.
+  function:
+    - key: resolver
+      handler: index.handler
+resources:
+  - key: main
+    path: src/frontend/index.jsx
+app:
+  runtime:
+    name: nodejs18.x
+  id: ari:cloud:ecosystem::app/51beee15-64f0-4625-802a-b4545b14021c
