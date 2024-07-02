@@ -1,0 +1,26 @@
+modules:
+  confluence:globalPage:
+    - key: quiz-test-global-page
+      resource: main
+      render: native
+      resolver:
+        function: resolver
+      title: Quiz Test
+      route: global-page
+  function:
+    - key: resolver
+      handler: index.handler
+resources:
+  - key: main
+    path: src/frontend/index.jsx
+permissions:
+  external:
+    images:
+      - 'https://media.giphy.com'
+    fetch:
+      backend:
+        - 'https://api.humanitix.com'
+app:
+  runtime:
+    name: nodejs18.x
+  id: ari:cloud:ecosystem::app/73b7af54-9295-47e6-94d4-eddeba4612cd
