@@ -1,0 +1,20 @@
+modules:
+  macro:
+    - key: forgeAppDemo-leaderboard-macro
+      resource: main
+      render: native
+      resolver:
+        function: resolver
+      title: forgeAppDemo-LockedIn's
+      config: true
+  function:
+    - key: resolver
+      handler: index.handler
+resources:
+  - key: main
+    path: src/frontend/index.jsx
+app:
+  runtime:
+    name: nodejs18.x
+  id: ari:cloud:ecosystem::app/dbf6cef2-0743-48ec-9eef-f253f98b398f 
+  
