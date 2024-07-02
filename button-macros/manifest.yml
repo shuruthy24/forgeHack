@@ -1,0 +1,19 @@
+modules:
+  macro:
+    - key: button-macros-macro
+      resource: main
+      render: native
+      resolver:
+        function: resolver
+      title: Button macros
+      description: inserts a button
+  function:
+    - key: resolver
+      handler: index.handler
+resources:
+  - key: main
+    path: src/frontend/index.jsx
+app:
+  runtime:
+    name: nodejs18.x
+  id: ari:cloud:ecosystem::app/d816f390-3e65-4ad3-ac4e-c5728fd5b8a2
